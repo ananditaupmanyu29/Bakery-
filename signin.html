@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Sweet Treats Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Sweet Treats Bakery</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="product.html">Products</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section class="signin-page">
+    <div class="signin-box">
+        <h2>Sign In</h2>
+
+        <form id="signupForm" onsubmit="return validateForm()">
+
+            <input type="text" id="name" placeholder="Enter your Name">
+            <span class="error" id="nameError"></span>
+
+            <input type="text" id="address" placeholder="Enter your Address">
+            <span class="error" id="addressError"></span>
+
+            <input type="text" id="email" placeholder="Enter your Email">
+            <span class="error" id="emailError"></span>
+
+            <input type="text" id="phone" placeholder="Enter your Phone Number">
+            <span class="error" id="phoneError"></span>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>Email: bakery@gmail.com | Phone: +91 98765 43210</p>
+</footer>
+
+<script>
+function validateForm() {
+    let valid = true;
+
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("addressError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("phoneError").innerHTML = "";
+
+    let name = document.getElementById("name").value;
+    let address = document.getElementById("address").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+
+    if(name == ""){
+        document.getElementById("nameError").innerHTML = "Name is required";
+        valid = false;
+    }
+
+    if(address == ""){
+        document.getElementById("addressError").innerHTML = "Address is required";
+        valid = false;
+    }
+
+    if(email == ""){
+        document.getElementById("emailError").innerHTML = "Email is required";
+        valid = false;
+    } else if(!email.includes("@")){
+        document.getElementById("emailError").innerHTML = "Enter valid email";
+        valid = false;
+    }
+
+    if(phone == ""){
+        document.getElementById("phoneError").innerHTML = "Phone number is required";
+        valid = false;
+    } else if(phone.length != 10 || isNaN(phone)){
+        document.getElementById("phoneError").innerHTML = "Enter valid 10-digit number";
+        valid = false;
+    }
+
+    return valid;
+}
+</script>
+
+</body>
+</html>
