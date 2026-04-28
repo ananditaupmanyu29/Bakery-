@@ -1,106 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sweet Bakery</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff8f0;
-    }
-    header {
-      background-color: #d2691e;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #8b4513;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background-image: url('https://static.toiimg.com/photo/48201473.cms');
-      background-size: cover;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    .hero h1 {
-      font-size: 50px;
-    }
-    .section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .products {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    form {
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 15px;
-      width: 50%;
-      margin-top: 20px;
-    }
-    input, button {
-      margin: 5px 0;
-      padding: 8px;
-      width: 95%;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 200px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    footer {
-      background-color: #d2691e;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Sweet Treats Bakery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>Sweet Treats Bakery</h1>
+    <h1>Sweet Treats Bakery</h1>
 </header>
-
-<nav>
-  <a href="iindex.html">Home</a>
-  <a href="product.html">Product</a>
-  <a href="contact.html">Contact</a>
-</nav>
 
 <section class="hero">
   <h1>Delicious Cakes & Pastries</h1>
   <p>Made with love and the finest ingredients</p>
 </section>
-<form>
-    <label>Name</label>
-    <input text ="text"placeholder="enter the name">
-    <label>Contact no.</label>
-    <input text="text"placeholder="enter the contact">
-</form>
+
+<section class="cards">
+    <div class="card">
+        <a href="product.html">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Products">
+            <h3>Products</h3>
+            <p>Explore our delicious cakes and pastries.</p>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="contact.html">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" alt="Contact">
+            <h3>Contact</h3>
+            <p>Get in touch with us for orders and queries.</p>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="signin.html">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Home">
+            <h3>Sing In</h3>
+            <p>Connect with Sweet Treats Bakery.</p>
+        </a>
+    </div>
+</section>
+
 <footer>
-<p>Follow us on:
-<a href="#">Facebook</a> |
-<a href="#">Instagram</a> |
-<a href="#">Twitter</a>
-</p>
-<p>Email: bakery@gmail.com | Phone: +91 98765 43210</p>
+    <p>Email: bakery@gmail.com | Phone: +91 98765 43210</p>
 </footer>
-    </body>
+
+</body>
 </html>
